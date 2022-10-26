@@ -14,15 +14,15 @@ namespace RevitAPILibrary
 
     {
 
-        public static List<Duct> GetDuctType(ExternalCommandData commandData)
+        public static List<DuctType>GetDuctType(ExternalCommandData commandData)
         {
             UIApplication uiapp = commandData.Application;
             UIDocument uIDocument = uiapp.ActiveUIDocument;
             Document document = uIDocument.Document;
 
-            List<Duct> ductTypeList = new FilteredElementCollector(document)
-                .OfClass(typeof(Duct))
-                .Cast<Duct>()
+            List<DuctType> ductTypeList = new FilteredElementCollector(document)
+                .OfClass(typeof(DuctType))
+                .Cast<DuctType>()
                 .ToList();
 
             return ductTypeList;
