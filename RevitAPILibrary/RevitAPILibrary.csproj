@@ -51,12 +51,15 @@
     <Compile Include="DuctData.cs" />
     <Compile Include="FamilyInstanceData.cs" />
     <Compile Include="FamilySymbolData.cs" />
+    <Compile Include="FilterData.cs" />
     <Compile Include="LevelData.cs" />
     <Compile Include="PipeData.cs" />
     <Compile Include="CalculationUtils.cs" />
+    <Compile Include="ScheduleData.cs" />
     <Compile Include="SelectionUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TagData.cs" />
+    <Compile Include="ViewportData.cs" />
     <Compile Include="ViewsData.cs" />
     <Compile Include="WallData.cs" />
   </ItemGroup>

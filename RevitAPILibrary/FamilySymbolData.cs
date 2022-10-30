@@ -26,9 +26,9 @@ namespace RevitAPILibrary
 
         public static List<FamilySymbol> PickAllFurnitureType(ExternalCommandData commandData)
         {
-            var uiapp = commandData.Application;
-            var uidoc = uiapp.ActiveUIDocument;
-            var doc = uidoc.Document;
+            UIApplication uiapp = commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Document doc = uidoc.Document;
 
             var familySymbols = new FilteredElementCollector(doc)
                 .OfClass(typeof(FamilySymbol))
@@ -38,6 +38,25 @@ namespace RevitAPILibrary
 
             return familySymbols;
         }
+
+
+        public static List<FamilySymbol> PickAllTitleBlockType(ExternalCommandData commandData)
+        {
+            UIApplication uiapp = commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Document doc = uidoc.Document;
+
+            var familySymbols = new FilteredElementCollector(doc)
+                .OfClass(typeof(FamilySymbol))
+                .OfCategory(BuiltInCategory.OST_TitleBlocks)
+                .Cast<FamilySymbol>()
+                .ToList();
+
+            return familySymbols;
+        }
+
+
+
 
     }
 }
